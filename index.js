@@ -1,6 +1,6 @@
 function sayHello(name, surname, someOtherWord) {
 // Commit 1
-    console.log(`${name} ${surname} ${someOtherwWord}`)
+    console.log(`Hello${name} ${surname} ${someOtherwWord}`)
 }
 
 sayHello('Danko', 'Dudar');
