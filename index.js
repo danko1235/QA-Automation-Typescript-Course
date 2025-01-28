@@ -1,5 +1,5 @@
-function sayHello() {
-    console.log('Hello!')
+function sayHello(name, surname) {
+    console.log(`${name} ${surname}`)
 }
 
-sayHello();
+sayHello('Danko', 'Dudar');
