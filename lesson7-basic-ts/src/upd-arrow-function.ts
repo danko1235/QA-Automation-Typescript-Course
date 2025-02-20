@@ -1,4 +1,4 @@
-import { mixedArray } from './updated-types';
+import { mixedArray } from './upd-types';
 
 const sumArrayArrow = (arr: (number | string)[]): number =>
     arr.reduce((sum: number, num: string | number) => {

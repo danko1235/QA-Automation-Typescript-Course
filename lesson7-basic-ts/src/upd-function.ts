@@ -1,5 +1,3 @@
-import { mixedArray } from './updated-types';
-
 function sumArray(arr: (number | string)[]): number {
     return arr.reduce((sum: number, current: string | number) => {
         const parsed = Number(current);
