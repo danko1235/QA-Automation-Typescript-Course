@@ -1,9 +1,4 @@
-interface Todo {
-    userId: number;
-    id: number;
-    title: string;
-    completed: boolean;
-}
+import { Todo } from './type';
 
 abstract class DataTransformer<InputType, OutputType> {
     protected data: InputType;
@@ -22,22 +17,4 @@ class TodoSummary extends DataTransformer<Todo[], { id: number; summary: string 
     }
 }
 
-export { Todo, TodoSummary };
-
-const todos: Todo[] = [
-    {
-        userId: 1,
-        id: 1,
-        title: 'Danko User',
-        completed: false
-    },
-    {
-        userId: 2,
-        id: 2,
-        title: 'Danko Admin',
-        completed: true
-    }
-];
-
-const todoSummary = new TodoSummary(todos);
-console.log(todoSummary.transform());
+export { TodoSummary };
