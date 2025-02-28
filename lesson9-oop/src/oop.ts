@@ -1,6 +1,6 @@
-import { IMovable, IFuelable, IChargeable } from './interfaces';
+import { IFuelable, IChargeable } from './interfaces';
 
-abstract class Vehicle implements IMovable {
+abstract class Vehicle {
     public constructor(protected name: string) {}
 
     public abstract move(): void;
