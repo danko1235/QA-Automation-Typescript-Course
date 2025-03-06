@@ -1,25 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { Vehicle, GasolineCar, ElectricCar, HybridCar, getVehicleInfo } from '../src/oop';
 
-class MockGasolineCar extends GasolineCar {
-    public move = vi.fn();
-    public refuel = vi.fn();
-    public getMovementDescription = vi.fn().mockReturnValue('Mock gasoline movement');
-}
-
-class MockElectricCar extends ElectricCar {
-    public move = vi.fn();
-    public charge = vi.fn();
-    public getMovementDescription = vi.fn().mockReturnValue('Mock electric movement');
-}
-
-class MockHybridCar extends HybridCar {
-    public move = vi.fn();
-    public refuel = vi.fn();
-    public charge = vi.fn();
-    public getMovementDescription = vi.fn().mockReturnValue('Mock hybrid movement');
-}
-
 describe('Vehicle Classes', () => {
     describe('Base Vehicle', () => {
         class TestVehicle extends Vehicle {
@@ -43,19 +24,25 @@ describe('Vehicle Classes', () => {
     });
 
     describe('GasolineCar', () => {
-        let car: MockGasolineCar;
+        let car: GasolineCar;
 
         beforeEach(() => {
-            car = new MockGasolineCar('Petrol Car');
+            car = new GasolineCar('Petrol Car');
+            vi.spyOn(car, 'move').mockImplementation(() => {
+                console.log('Car is moving');
+            });
+            vi.spyOn(car, 'refuel').mockImplementation(() => {
+                console.log('Car is refueling');
+            });
+            vi.spyOn(car, 'getMovementDescription').mockReturnValue('Mock gasoline movement');
         });
 
         it('should create a gasoline car and call methods', () => {
             expect(car.getName()).toBe('Petrol Car');
             expect(car.describe()).toBe('This is a vehicle: Petrol Car');
 
-            // Fail test to see the error message for me (uncomment "car.refuel()" to pass the test)
-            //car.refuel();
             car.move();
+            car.refuel();
             expect(car.move).toHaveBeenCalledOnce();
             expect(car.refuel).toHaveBeenCalledOnce();
         });
@@ -66,10 +53,17 @@ describe('Vehicle Classes', () => {
     });
 
     describe('ElectricCar', () => {
-        let car: MockElectricCar;
+        let car: ElectricCar;
 
         beforeEach(() => {
-            car = new MockElectricCar('Electric Car');
+            car = new ElectricCar('Electric Car');
+            vi.spyOn(car, 'move').mockImplementation(() => {
+                console.log('Electric car is moving');
+            });
+            vi.spyOn(car, 'charge').mockImplementation(() => {
+                console.log('Electric car is charging');
+            });
+            vi.spyOn(car, 'getMovementDescription').mockReturnValue('Mock electric movement');
         });
 
         it('should create an electric car and call methods', () => {
@@ -84,10 +78,20 @@ describe('Vehicle Classes', () => {
     });
 
     describe('HybridCar', () => {
-        let car: MockHybridCar;
+        let car: HybridCar;
 
         beforeEach(() => {
-            car = new MockHybridCar('Hybrid Car');
+            car = new HybridCar('Hybrid Car');
+            vi.spyOn(car, 'move').mockImplementation(() => {
+                console.log('Hybrid car is moving');
+            });
+            vi.spyOn(car, 'refuel').mockImplementation(() => {
+                console.log('Hybrid car is refueling');
+            });
+            vi.spyOn(car, 'charge').mockImplementation(() => {
+                console.log('Hybrid car is charging');
+            });
+            vi.spyOn(car, 'getMovementDescription').mockReturnValue('Mock hybrid movement');
         });
 
         it('should create a hybrid car and call all methods', () => {
@@ -105,17 +109,22 @@ describe('Vehicle Classes', () => {
 
     describe('getVehicleInfo', () => {
         it('should return correct vehicle information', () => {
-            const mockVehicle = new MockGasolineCar('Info Car');
-            mockVehicle.describe = vi.fn().mockReturnValue('Mock description');
-            mockVehicle.getMovementDescription = vi.fn().mockReturnValue('Mock movement');
+            const vehicle = new GasolineCar('Info Car');
+            vi.spyOn(vehicle, 'getName').mockReturnValue('Info Car');
+            vi.spyOn(vehicle, 'describe').mockReturnValue('Mock description');
+            vi.spyOn(vehicle, 'getMovementDescription').mockReturnValue('Mock movement');
 
-            const info = getVehicleInfo(mockVehicle);
+            const info = getVehicleInfo(vehicle);
 
             expect(info).toEqual({
                 name: 'Info Car',
                 description: 'Mock description',
                 movement: 'Mock movement'
             });
+
+            expect(vehicle.getName).toHaveBeenCalled();
+            expect(vehicle.describe).toHaveBeenCalled();
+            expect(vehicle.getMovementDescription).toHaveBeenCalled();
         });
     });
 });
