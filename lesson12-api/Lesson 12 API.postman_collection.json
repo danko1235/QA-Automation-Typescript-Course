@@ -44,12 +44,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3005/jokes/random",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/jokes/random",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3005",
 					"path": [
 						"jokes",
 						"random"
@@ -81,12 +79,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3005/jokes/ten",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/jokes/ten",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3005",
 					"path": [
 						"jokes",
 						"ten"
@@ -118,12 +114,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3005/jokes/random/3",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/jokes/random/3",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3005",
 					"path": [
 						"jokes",
 						"random",
@@ -154,12 +148,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3005/jokes/programming/random",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/jokes/programming/random",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3005",
 					"path": [
 						"jokes",
 						"programming",
@@ -193,12 +185,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3005/jokes/programming/ten",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/jokes/programming/ten",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3005",
 					"path": [
 						"jokes",
 						"programming",
@@ -231,12 +221,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3005/types",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/types",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3005",
 					"path": [
 						"types"
 					]
@@ -269,12 +257,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3005/jokes/42",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/jokes/42",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3005",
 					"path": [
 						"jokes",
 						"42"
@@ -304,12 +290,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3005/invalid-url",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/invalid-url",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3005",
 					"path": [
 						"invalid-url"
 					]
@@ -341,12 +325,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3005/jokes/random/451",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/jokes/random/451",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3005",
 					"path": [
 						"jokes",
 						"random",
@@ -380,12 +362,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3005/jokes/random/45",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/jokes/random/45",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3005",
 					"path": [
 						"jokes",
 						"random",
@@ -420,8 +400,14 @@
 	],
 	"variable": [
 		{
-			"value": "",
+			"key": "baseUrl",
+			"value": "http://localhost:3005",
 			"type": "string"
+		},
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
 		}
 	]
 }
