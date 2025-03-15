@@ -8,11 +8,11 @@ const config: JestConfigWithTsJest = {
     transform: {
         '^.+\\.tsx?$': ['ts-jest', { useESM: true }]
     },
+    transformIgnorePatterns: ['node_modules/(?!(chai|@pact-foundation/pact)/)'],
     testPathIgnorePatterns: ['./dist'],
     clearMocks: true,
     coverageProvider: 'v8',
     testMatch: ['**/tests/**/*.[t]s?(x)', '**/?(*.)+(spec|test).[t]s?(x)']
-    // globalSetup: './src/jest-global-setup.ts'
 };
 
 export default config;

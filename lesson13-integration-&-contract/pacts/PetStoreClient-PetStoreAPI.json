@@ -1,0 +1,82 @@
+{
+  "consumer": {
+    "name": "PetStoreClient"
+  },
+  "interactions": [
+    {
+      "description": "a request for a pet by ID",
+      "request": {
+        "method": "GET",
+        "path": "/pet/1"
+      },
+      "response": {
+        "body": {
+          "id": 1,
+          "name": "Rex",
+          "photoUrls": [
+            "https://example.com/photo.jpg"
+          ],
+          "status": "available"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$.id": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.name": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.photoUrls": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type",
+                  "min": 1
+                }
+              ]
+            },
+            "$.status": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {},
+          "status": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "14.0.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "PetStoreAPI"
+  }
+}

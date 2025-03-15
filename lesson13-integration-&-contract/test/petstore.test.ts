@@ -1,57 +1,36 @@
+import { Pact } from '@pact-foundation/pact';
 import axios from 'axios';
-import { expect } from '@jest/globals';
 
-describe('Pet Store Contract Tests', () => {
-    const baseUrl = 'https://petstore.swagger.io/v2';
+const provider = new Pact({
+    consumer: 'PetstoreConsumer',
+    provider: 'PetstoreAPI',
+    port: 1234
+});
 
-    it('should get pet data with id 1 and verify the contract', async () => {
-        const response = await axios.get(`${baseUrl}/pet/1`);
+describe('Contract Tests for Petstore API', () => {
+    beforeAll(() => provider.setup());
+    afterAll(() => provider.finalize());
 
+    it('should fetch a pet by ID', async () => {
+        await provider.addInteraction({
+            state: 'A pet with ID exists',
+            uponReceiving: 'a request for a pet by ID',
+            withRequest: {
+                method: 'GET',
+                path: '/pet/1'
+            },
+            willRespondWith: {
+                status: 200,
+                body: {
+                    id: 1,
+                    name: 'Fluffy',
+                    status: 'available'
+                }
+            }
+        });
+
+        const response = await axios.get('http://localhost:1234/pet/1');
         expect(response.status).toBe(200);
-
-        const data = response.data;
-
-        expect(data).toHaveProperty('id');
-        expect(data).toHaveProperty('category');
-        expect(data).toHaveProperty('name');
-        expect(data).toHaveProperty('photoUrls');
-        expect(data).toHaveProperty('tags');
-        expect(data).toHaveProperty('status');
-
-        expect(typeof data.id).toBe('number');
-        expect(typeof data.name).toBe('string');
-        expect(typeof data.category).toBe('object');
-        expect(Array.isArray(data.photoUrls)).toBe(true);
-        expect(Array.isArray(data.tags)).toBe(true);
-        expect(['available', 'pending', 'sold']).toContain(data.status);
-
-        if (data.category) {
-            expect(data.category).toHaveProperty('id');
-            expect(data.category).toHaveProperty('name');
-        }
-
-        if (data.tags && data.tags.length > 0) {
-            expect(data.tags[0]).toHaveProperty('id');
-            expect(data.tags[0]).toHaveProperty('name');
-        }
-    });
-
-    it('should return 404 for a non-existent pet', async () => {
-        try {
-            await axios.get(`${baseUrl}/pet/999999`);
-        } catch (error: unknown) {
-            if (axios.isAxiosError(error)) {
-                expect(error.response?.status).toBe(404);
-
-                const data = error.response?.data;
-                expect(typeof data.message).toBe('string');
-            }
-            if (axios.isAxiosError(error) && error.response) {
-                expect(error.response.status).toBe(404);
-
-                const data = error.response.data;
-                expect(typeof data.message).toBe('string');
-            }
-        }
+        expect(response.data.name).toBe('Fluffy');
     });
 });

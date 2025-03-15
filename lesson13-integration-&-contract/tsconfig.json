@@ -6,7 +6,7 @@
   ],
   "compilerOptions": {
     "baseUrl": "./",
-    "target": "ESNext",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "target": "ES2020",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     "lib": ["ESNext", "DOM"],
     "module": "ESNext",                                /* Specify what module code is generated. */
     "rootDir": ".",                                  /* Check side effect imports. */
