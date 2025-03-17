@@ -8,9 +8,31 @@ const provider = new Pact({
     port: 1234
 });
 
+const expBody = {
+    id: 1,
+    category: {
+        id: 1,
+        name: 'string'
+    },
+    name: 'doggie',
+    photoUrls: ['string'],
+    tags: [
+        {
+            id: 1,
+            name: 'string'
+        }
+    ],
+    status: 'available'
+};
+
 describe('Contract Tests for Petstore API', () => {
-    beforeAll(() => provider.setup());
-    afterAll(() => provider.finalize());
+    beforeAll(async () => {
+        await provider.setup();
+    });
+
+    afterAll(async () => {
+        await provider.finalize();
+    });
 
     it('should fetch a pet by ID', async () => {
         await provider.addInteraction({
@@ -22,17 +44,13 @@ describe('Contract Tests for Petstore API', () => {
             },
             willRespondWith: {
                 status: 200,
-                body: {
-                    id: 1,
-                    name: 'Fluffy',
-                    status: 'available'
-                }
+                body: expBody
             }
         });
 
         const response = await axios.get('http://localhost:1234/pet/1');
         expect(response.status).toBe(200);
-        expect(response.data.name).toBe('Fluffy');
+        expect(response.data).toEqual(expBody);
     });
 
     it('should verify provider', async () => {
