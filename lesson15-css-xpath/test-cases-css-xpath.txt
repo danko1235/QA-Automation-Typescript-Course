@@ -1,0 +1,96 @@
+// Тест-кейс: Успішний вхід у систему CSS
+
+Ввести email у поле input.ui-input__element[type="email"] - "test@example.com"
+Ввести пароль у поле input.ui-input__element[type="password"] - "12345qwerty"
+Натиснути кнопку button.ui-button.size-56.primary.form-btn[type="submit"]
+Очікувати що юзер попаде на головну сторінку.
+
+// Тест-кейс: Успішний вхід у систему Xpath
+
+Ввести email у поле (//input[@class="ui-input__element" and @type="email"]) - "test@example.com"
+Ввести пароль у поле (//input[@class="ui-input__element" and @type="password"]) - "12345qwerty"
+Натиснути кнопку //button[contains(@class, "primary")]
+Очікувати що юзер попаде на головну сторінку.
+
+// Тест-кейс: Вхід без заповнення полів CSS
+
+Натиснути кнопку button.ui-button.size-56.primary.form-btn[type="submit"]
+Очікувати на еррор меседж div.ui-message--error
+
+// Тест-кейс: Вхід без заповнення полів Xpath
+
+Натиснути кнопку //button[contains(@class, "primary")]
+Очікувати на еррор меседж //div[contains(@class, "ui-message--error")]
+
+// Тест-кейси: Left sidebar menu
+
+1. Order-history tab
+
+CSS
+
+Натиснути a[href="/order-history"].
+Очікувати, що сторінка змінилася на "Order history".
+
+Xpath
+
+Натиснути //a[@href="/order-history"].
+Очікувати, що сторінка змінилася на "Order history".
+
+2. Order tab (тут проблема, що при кліку на "logo-image" силка також веде на Order сторінку, так як це mein page. Тому такий селектор) 
+
+CSS
+Натиснути a.ui-button.size-48.menu.router-link-active.router-link-exact-active[aria-current="page"][href="/order"].
+Очікувати, що сторінка змінилася на "Order".
+
+Xpath
+
+Натиснути //a[@class="router-link-active router-link-exact-active ui-button size-48 menu" and @aria-current="page" and @href="/order" and @disabled="false"].
+Очікувати, що сторінка змінилася на "Order".
+
+3. Diet and allergies tab
+
+CSS
+
+Натиснути a[href="/allergic"].
+Очікувати, що сторінка змінилася на "Diet and allergies".
+
+Xpath
+
+Натиснути //a[@href="/allergic"].
+Очікувати, що сторінка змінилася на "Diet and allergies".
+
+4. FAQ's tab
+
+CSS
+
+Натиснути a[href="/faq"].
+Очікувати, що сторінка змінилася на "FAQ's".
+
+Xpath
+
+Натиснути //a[@href="/faq"].
+Очікувати, що сторінка змінилася на "FAQ's".
+
+5. Contact us tab
+
+CSS
+
+Натиснути a[href="/contact-us"].
+Очікувати, що сторінка змінилася на "Contact us".
+
+Xpath
+
+Натиснути //a[@href="/contact-us"].
+Очікувати, що сторінка змінилася на "Contact us".
+
+6. Feelia logo image
+
+CSS
+
+Натиснути img.logo[alt="logo"].
+Очікувати, що користувач повертається на головну сторінку, тобто Order page.
+
+Xpath
+
+Натиснути //img[@class="logo" and @alt="logo"].
+Очікувати, що користувач повертається на головну сторінку, тобто Order page.
