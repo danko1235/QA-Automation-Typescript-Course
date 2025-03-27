@@ -1,7 +1,8 @@
 import LoginPage from '../src/login-page';
+import OrderHistoryPage from '../src/order-history-page';
+import AllergicPage from '../src/allergic-page';
 import { expect } from 'chai';
-import { $, browser } from '@wdio/globals';
-
+import { browser } from '@wdio/globals';
 
 describe('Login and Navigation Tests', () => {
     beforeEach(async () => {
@@ -11,23 +12,16 @@ describe('Login and Navigation Tests', () => {
 
     it('Login', async () => {
         await browser.waitUntil(async () => (await browser.getUrl()).includes('/order'));
-        const currentUrl = await browser.getUrl();
-        expect(currentUrl).to.include('/order');
+        expect(await browser.getUrl()).to.include('/order');
     });
 
-    it('Navigate to Order history', async () => {
-        const orderHistoryLink = $('a[href="/order-history"]');
-        await orderHistoryLink.waitForDisplayed();
-        await orderHistoryLink.click();
-        await browser.waitUntil(async () => (await browser.getUrl()).includes('/order-history'));
+    it('Order history', async () => {
+        await OrderHistoryPage.navigate();
         expect(await browser.getUrl()).to.include('/order-history');
     });
 
-    it('Navigate to Diet and allergies', async () => {
-        const allergicLink = $('a[href="/allergic"]');
-        await allergicLink.waitForDisplayed();
-        await allergicLink.click();
-        await browser.waitUntil(async () => (await browser.getUrl()).includes('/allergic'));
+    it('Diet and allergies', async () => {
+        await AllergicPage.navigate();
         expect(await browser.getUrl()).to.include('/allergic');
     });
 });
