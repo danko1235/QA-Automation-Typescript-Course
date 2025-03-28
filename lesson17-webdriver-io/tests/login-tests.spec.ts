@@ -11,7 +11,6 @@ describe('Login and Navigation Tests', () => {
     });
 
     it('Login', async () => {
-        await browser.waitUntil(async () => (await browser.getUrl()).includes('/order'));
         expect(await browser.getUrl()).to.include('/order');
     });
 
