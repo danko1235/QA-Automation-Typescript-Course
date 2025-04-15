@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="47.326" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-04-15T16:15:04.781Z">
+  <testcase classname="Feelia Web Application Testing" name="Verify user can navigate to Order History page" time="18.117">
+    <system-out><![CDATA[Given the user is authenticated.............................................passed
+When the user navigates to Order History page...............................passed
+Then the user should see the Order History page.............................passed
+And the Order History page should display orders............................passed]]></system-out>
+  </testcase>
+  <testcase classname="Feelia Web Application Testing" name="Verify user can open order details" time="17.731">
+    <system-out><![CDATA[Given the user is authenticated.............................................passed
+When the user navigates to Order History page...............................passed
+And the user opens the first order details..................................passed
+Then the order details should be displayed..................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Feelia Web Application Testing" name="Verify navigation menu functionality" time="11.26">
+    <system-out><![CDATA[Given the user is authenticated.............................................passed
+When the user clicks on the Orders menu item................................passed
+Then the user should be redirected to the Orders page.......................passed
+When the user clicks on the Special Orders menu item........................passed
+Then the user should be redirected to the Special Orders page...............passed
+When the user clicks on the FAQs menu item..................................passed
+Then the user should be redirected to the FAQs page.........................passed]]></system-out>
+  </testcase>
+</testsuite>

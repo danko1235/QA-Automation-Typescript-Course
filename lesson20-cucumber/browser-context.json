@@ -1,0 +1,35 @@
+{
+  "cookies": [
+    {
+      "name": "AWSALB",
+      "value": "HbhbSyoP2BzN5YfApcNg1FCPGyWwiBeBsK6pn8zV2EeaLRKzN5dbKmV1Lw0ZUfe68eGOQMwTtqjUCJoH0S67FQX1+WTdohzwxTI8GK6ZyqdpEdZod2Tg3h0FJpFT",
+      "domain": "stage-ferp.fi",
+      "path": "/",
+      "expires": 1745331638.482729,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "AWSALBCORS",
+      "value": "HbhbSyoP2BzN5YfApcNg1FCPGyWwiBeBsK6pn8zV2EeaLRKzN5dbKmV1Lw0ZUfe68eGOQMwTtqjUCJoH0S67FQX1+WTdohzwxTI8GK6ZyqdpEdZod2Tg3h0FJpFT",
+      "domain": "stage-ferp.fi",
+      "path": "/",
+      "expires": 1745331638.482753,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://stage-ferp.fi",
+      "localStorage": [
+        {
+          "name": "token",
+          "value": "{\"status\":200,\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyMjkiLCJqdGkiOiI0YmM4OTZjMzg3ZGEzZmM0MTNkZDRkZTM5MGQ3ZjY4ZTMzZGRlOTkzMGVjNTVhMDg4YTA0OTdmNzljODhhYjI2ZWZlYzcxYmZjY2U4ZmRhZiIsImlhdCI6MTc0NDcyNjgzNy44NDcwNjksIm5iZiI6MTc0NDcyNjgzNy44NDcwNzMsImV4cCI6MTc3NjI2MjgzNy44MjYzMjYsInN1YiI6Ijc5NCIsInNjb3BlcyI6W119.QnAtSiu3trNiTVgjimxcI_9AinGf7RDyUU1GnP_c87bENaxKvSAELP_onLuHe8d11sx9zhczwuaNs9NUV07KlW0RHaYCPoD8GqCxHm6HYsH_zl9iHle_imnAsmnW_QjZ3WvqrXI1YOqParKeAF9nzfRk7YwQ_4hWRX9QH9tCPhCZZbXuDZwBXQRtzgogqnHwqfVWdhVZU8ggOE-HBvSweJQguHi8evie2Qc6BSZVWXOxt23vChMYzDDOzm223n4fFGwRv9IzyzzYhnv5a8KznM0obghjleg-gOLrlmlwBV5MV3Pgp06WBY6TJyhMLA7k5kitI5o6zSldzMPc_nhrvQ1-LR-j3lLHZKFt2pk6qq6u_SxXa0v1kaof68EYQDzq4g_llr1mbsvGDUu41w8o9U2i_Hu0lgmgZ01Y3rXJ97-FGmA9-MskQ0F8YGRk94v3I1UqHh2AVNzUg7yHCLaXhGKJX3eRB3ISMtpcBm0Plyrm0-EHkkPCq1dX80y3VUnFBA0wp7-uPN8Azlf0uvFNSNB8iktbSqFxRCVqMEsvU5KgaiCuc3wqu_mvRYdbLG1f1e1cHxVY8zJ_t9IjE2N6H-lyoqhNw1oDnhmU5sjoVbQqOnFRXpQf0Hk4I2MOwOz9B7mfPvF1Adx5_WyxGMJVmmr_FYQUekGFy0nDnVblqUY\",\"expires_at\":\"2026-04-15 17:20:37\"}"
+        }
+      ]
+    }
+  ]
+}
