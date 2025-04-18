@@ -8,12 +8,37 @@ export class FeeliaBasePage {
 
     public constructor(protected readonly page: Page) {
         this.page = page;
-        this.sideBar = new FeeliaSideMenuElement(this.page.locator('[role="complementary"]'));
+        this.sideBar = new FeeliaSideMenuElement(
+            this.page.locator('[role="complementary"]')
+        );
         this.header = new FeeliaHeaderElement(this.page.locator('[role="banner"]'));
     }
-
     public async login(username: string, password: string): Promise<void> {
+        await this.page.goto('https://stage-ferp.fi/order');
+        const currentUrl = this.page.url();
+        const isLoggedIn = !currentUrl.includes('/user/login') && !currentUrl.includes('/login');
+
+        if (isLoggedIn) {
+            console.log('User is already logged in, skipping login process');
+            return;
+        }
+
         await this.page.goto('https://stage-ferp.fi/user/login');
+
+        const usernameInputVisible = await this.page.locator('input[name="username"]').isVisible();
+        const passwordInputVisible = await this.page.locator('input[name="password"]').isVisible();
+
+        if (!usernameInputVisible || !passwordInputVisible) {
+            console.log(
+                'Login form elements not visible. Username visible:',
+                usernameInputVisible,
+                'Password visible:',
+                passwordInputVisible
+            );
+            await this.page.screenshot({ path: 'login-form-not-visible.png' });
+            return;
+        }
+
         await this.page.fill('input[name="username"]', username);
         await this.page.fill('input[name="password"]', password);
         await this.page.click('button[type="submit"]');
@@ -81,5 +106,11 @@ export class FeeliaBasePage {
 
     public async isSideBarVisible(): Promise<boolean> {
         return this.page.getByRole('navigation').isVisible();
+    }
+
+    public async isLoggedIn(): Promise<boolean> {
+        await this.page.waitForTimeout(1000);
+        const currentUrl = this.page.url();
+        return !currentUrl.includes('/user/login') && !currentUrl.includes('/login');
     }
 }
