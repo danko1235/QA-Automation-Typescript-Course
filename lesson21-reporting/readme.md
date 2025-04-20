@@ -6,5 +6,5 @@
 3. **Mochawesome**
 
 ## Configuration example is in lesson 18 (Playwright) and lesson 10 (Jest) code or available by the following link
-
+https://github.com/danko1235/QA-Automation-Typescript-Course/pull/23
 
