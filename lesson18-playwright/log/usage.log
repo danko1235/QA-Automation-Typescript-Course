@@ -1,0 +1,26 @@
+2025-04-20 14:30:59 - [32minfo[39m: Creating configuration file...
+2025-04-20 14:30:59 - [32minfo[39m: Adding new script(s) in package.json...
+2025-04-20 14:30:59 - [32minfo[39m: Setup completed
+2025-04-20 14:32:15 - [32minfo[39m: Running SDK with args C:\nvm4w\nodejs\node.exe C:\Users\dudar\OneDrive\Desktop\AQA Courses\lesson18-playwright\node_modules\browserstack-node-sdk\src\bin\runner.js playwright test
+2025-04-20 14:32:15 - [32minfo[39m: Reading configs from C:\Users\dudar\OneDrive\Desktop\AQA Courses\lesson18-playwright\browserstack.yml
+2025-04-20 14:32:15 - [32minfo[39m: SDK run started with id: 7e3ec01a-19e0-40f3-861d-4280f8fff0da
+2025-04-20 14:32:16 - [32minfo[39m: Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2025-04-20 14:32:19 - [32minfo[39m: Local binary started successfully
+2025-04-20 14:32:20 - [32minfo[39m: Testhub started with id: fwpkhh5du7oxqogc2mbithulwladqta9d4wzvx4c
+2025-04-20 14:32:23 - [32minfo[39m: Visit https://observability.browserstack.com/builds/fwpkhh5du7oxqogc2mbithulwladqta9d4wzvx4c to view build report, insights, and many more debugging information all at one place!
+
+2025-04-20 14:32:24 - [32minfo[39m: SDK run ended for id: 7e3ec01a-19e0-40f3-861d-4280f8fff0da, testhub id: fwpkhh5du7oxqogc2mbithulwladqta9d4wzvx4c
+2025-04-20 14:32:25 - [32minfo[39m: Deleting C:\Users\dudar\OneDrive\Desktop\AQA Courses\lesson18-playwright\playwright-browserstack-sdk.config.ts
+2025-04-20 14:32:28 - [32minfo[39m: Local binary stopped
+2025-04-20 14:35:04 - [32minfo[39m: Running SDK with args C:\nvm4w\nodejs\node.exe C:\Users\dudar\OneDrive\Desktop\AQA_Courses\lesson18-playwright\node_modules\browserstack-node-sdk\src\bin\runner.js playwright test
+2025-04-20 14:35:04 - [32minfo[39m: Reading configs from C:\Users\dudar\OneDrive\Desktop\AQA_Courses\lesson18-playwright\browserstack.yml
+2025-04-20 14:35:04 - [32minfo[39m: SDK run started with id: a86de37c-7fde-43a7-93c5-f10032e9ced7
+2025-04-20 14:35:04 - [32minfo[39m: Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2025-04-20 14:35:07 - [32minfo[39m: Local binary started successfully
+2025-04-20 14:35:08 - [32minfo[39m: Testhub started with id: duislyjqtjyalkyrqld1xrxwks6qgiyzubzkizz6
+2025-04-20 14:35:52 - [32minfo[39m: Visit https://observability.browserstack.com/builds/duislyjqtjyalkyrqld1xrxwks6qgiyzubzkizz6 to view build report, insights, and many more debugging information all at one place!
+
+2025-04-20 14:35:52 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/d8073131b9a02e012d814f753eed0deae68993cb
+2025-04-20 14:35:53 - [32minfo[39m: SDK run ended for id: a86de37c-7fde-43a7-93c5-f10032e9ced7, testhub id: duislyjqtjyalkyrqld1xrxwks6qgiyzubzkizz6
+2025-04-20 14:35:54 - [32minfo[39m: Deleting C:\Users\dudar\OneDrive\Desktop\AQA_Courses\lesson18-playwright\playwright-browserstack-sdk.config.ts
+2025-04-20 14:35:57 - [32minfo[39m: Local binary stopped
