@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+**/node_modules/
+
+# Playwright specific
+**/test-results/
+**/playwright-report/
+**/blob-report/
+**/playwright/.cache/
+
+# Allure reports
+**/allure-results/
+**/allure-report/
+**/.allure/
+
+# WIDO specific
+**/wido-results/
+**/wido-allure-results/
+**/wido-allure-report/
+
+# Other reports
+**/report/
+
+# Temp directories
+**/.obs_test_details-*/
