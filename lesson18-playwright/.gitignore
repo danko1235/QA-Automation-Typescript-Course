@@ -5,3 +5,6 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/allure-results/
+/allure-report/
+/.obs_test_details-duislyjqtjyalkyrqld1xrxwks6qgiyzubzkizz6/

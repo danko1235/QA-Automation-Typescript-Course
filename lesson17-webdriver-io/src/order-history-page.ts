@@ -1,4 +1,4 @@
-import Page from './Page';
+import Page from './page';
 import { $ } from '@wdio/globals';
 
 class OrderHistoryPage extends Page {
