@@ -12,7 +12,17 @@ const config: JestConfigWithTsJest = {
     clearMocks: true,
     coverageProvider: 'v8',
     testMatch: ['**/tests/**/*.[t]s?(x)', '**/?(*.)+(spec|test).[t]s?(x)'],
-    globalSetup: './src/jest-global-setup.ts'
+    globalSetup: './src/jest-global-setup.ts',
+    reporters: [
+        'default',
+        [
+            '@mate-academy/jest-mochawesome-reporter',
+            {
+                outputName: 'jest-mochawesome',
+                createDirIfMissing: true
+            }
+        ]
+    ]
 };
 
 export default config;
