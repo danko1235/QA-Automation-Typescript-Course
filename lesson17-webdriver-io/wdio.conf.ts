@@ -1,3 +1,4 @@
+import { browser } from '@wdio/globals';
 import { setOptions } from 'expect-webdriverio';
 
 export const config: WebdriverIO.Config = {
@@ -8,6 +9,7 @@ export const config: WebdriverIO.Config = {
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
     tsConfigPath: './tsconfig.json',
+    outputDir: './wdio-results/logs',
 
     //
     // ==================
@@ -51,12 +53,13 @@ export const config: WebdriverIO.Config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [
-        {
-            browserName: 'chrome'
+    capabilities: [{
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: process.env.HEADLESS === 'true' ?
+                ['--headless', '--disable-gpu', '--no-sandbox', '--window-size=1920,1080'] : []
         }
-    ],
-
+    }],
     //
     // ===================
     // Test Configurations
@@ -126,8 +129,14 @@ export const config: WebdriverIO.Config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
-
+    reporters: [
+        'spec',
+        ['allure', {
+            outputDir: 'wdio-results/allure-results',
+            disableWebdriverStepsReporting: true,
+            disableWebdriverScreenshotsReporting: false
+        }]
+    ],
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
@@ -190,7 +199,7 @@ export const config: WebdriverIO.Config = {
     /* eslint-disable */
     before: function (capabilities, specs, browser) {
         setOptions({ wait: 10000 });
-    }
+    },
     /* eslint-enable */
     /**
      * Runs before a WebdriverIO command gets executed.
@@ -232,9 +241,11 @@ export const config: WebdriverIO.Config = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
-
+    afterTest: function(test, context, { passed }) {
+        if (!passed) {
+            browser.takeScreenshot();
+        }
+    }
     /**
      * Hook that gets executed after the suite has ended
      * @param {object} suite suite details

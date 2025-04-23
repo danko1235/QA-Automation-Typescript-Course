@@ -1,0 +1,63 @@
+name: Final ProjectI
+
+on:
+  push:
+    branches: [ "master", "finalproject" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  test:
+    env:
+      BUILD_FOLDER: ./final-project
+      HEADLESS: true
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22.x]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install xvfb
+      run: sudo apt-get install -y xvfb
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        cache-dependency-path: ${{ env.BUILD_FOLDER }}/package-lock.json
+    - name: Install dependencies
+      working-directory: ${{ env.BUILD_FOLDER }}
+      run: npm ci
+    - name: Install Playwright browsers
+      working-directory: ${{ env.BUILD_FOLDER }}
+      run: npx playwright install --with-deps
+    - name: Run Playwright tests
+      working-directory: ${{ env.BUILD_FOLDER }}
+      run: |
+        PLAYWRIGHT_HEADLESS=true xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" npx playwright test
+    - name: Upload Playwright report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: playwright-report
+        path: ${{ env.BUILD_FOLDER }}/playwright-report/
+        retention-days: 30
+    
+    # Allure Report steps
+    - name: Setup Allure
+      uses: simple-elf/allure-report-action@master
+      if: always()
+      with:
+        allure_results: ${{ env.BUILD_FOLDER }}/allure-results
+        allure_report: ${{ env.BUILD_FOLDER }}/allure-report
+    
+    - name: Store Allure Report as Artifact
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: allure-report
+        path: ${{ env.BUILD_FOLDER }}/allure-report/
+        retention-days: 30

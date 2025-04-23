@@ -1,0 +1,4 @@
+Starting ChromeDriver 135.0.7049.96 (3504c18e3661c2f9d5de0685ccca27f593ad69c5-refs/branch-heads/7049@{#1837}) on port 64614
+Remote connections are allowed by an allowlist (0.0.0.0).
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully on port 64614.

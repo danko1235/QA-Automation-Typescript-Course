@@ -1,0 +1,297 @@
+2025-04-22T00:55:02.220Z INFO @wdio/local-runner: Run worker command: run
+2025-04-22T00:55:02.527Z INFO webdriver: Initiate new session using the WebDriver protocol
+2025-04-22T00:55:02.730Z INFO webdriver: Using Chromedriver v135.0.7049.96 from cache directory C:\Users\dudar\AppData\Local\Temp
+2025-04-22T00:55:03.751Z INFO @wdio/utils: Started Chromedriver v135.0.7049.96 with params --port=64614 --allowed-origins=* --allowed-ips=0.0.0.0 in 1026ms on port 64614
+2025-04-22T00:55:03.752Z INFO webdriver: [POST] http://localhost:64614/session
+2025-04-22T00:55:03.752Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: {
+      browserName: 'chrome',
+      'goog:chromeOptions': [Object],
+      webSocketUrl: true,
+      unhandledPromptBehavior: 'ignore'
+    },
+    firstMatch: [ {} ]
+  }
+}
+2025-04-22T00:55:04.239Z INFO webdriver: Register BiDi handler for session with id 8e01d1e7035cbfb62dc9dc8d98cd1cbf
+2025-04-22T00:55:04.239Z INFO webdriver: Connecting to webSocketUrl ws://127.0.0.1:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf
+2025-04-22T00:55:04.244Z INFO webdriver: Connected to Bidi protocol at ws://127.0.0.1:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf
+2025-04-22T00:55:04.244Z INFO webdriver: Connected to WebDriver Bidi interface at ws://127.0.0.1:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf
+2025-04-22T00:55:04.245Z INFO webdriver: BIDI COMMAND session.subscribe {"events":["browsingContext.contextCreated"]}
+2025-04-22T00:55:04.245Z INFO webdriver: BIDI COMMAND session.subscribe {"events":["log.entryAdded","browsingContext.navigationStarted"]}
+2025-04-22T00:55:04.245Z INFO webdriver: BIDI COMMAND script.addPreloadScript { functionDeclaration: <PreloadScript[1319 bytes]>, contexts: undefined }
+2025-04-22T00:55:04.246Z INFO webdriver: BIDI COMMAND session.subscribe {"events":["browsingContext.navigationStarted","browsingContext.fragmentNavigated","network.responseCompleted","network.beforeRequestSent","network.fetchError"]}
+2025-04-22T00:55:04.246Z INFO webdriver: BIDI COMMAND session.subscribe {"events":["browsingContext.userPromptOpened"]}
+2025-04-22T00:55:04.246Z INFO webdriver: BIDI COMMAND session.subscribe {"events":["browsingContext.navigationStarted"]}
+2025-04-22T00:55:04.246Z INFO webdriver: COMMAND getWindowHandle()
+2025-04-22T00:55:04.246Z INFO webdriver: BIDI COMMAND browsingContext.getTree {}
+2025-04-22T00:55:04.246Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/window
+2025-04-22T00:55:04.248Z INFO webdriver: RESULT C7FF8F2851DDDE4C77456EDCFD6131E3
+2025-04-22T00:55:04.251Z INFO webdriverio:PolyfillManager: Adding polyfill script to context with id C7FF8F2851DDDE4C77456EDCFD6131E3
+2025-04-22T00:55:04.251Z INFO webdriver: BIDI COMMAND script.callFunction {"functionDeclaration":"<Function[442 bytes] webdriverioPolyfill>","target":{"children":null,"clientWindow":"","context":"C7FF8F2851DDDE4C77456EDCFD6131E3","originalOpener":null,"parent":null,"url":"about:blank","userContext":"default"},"awaitPromise":false}
+2025-04-22T00:55:04.251Z INFO webdriver: BIDI COMMAND script.addPreloadScript { functionDeclaration: <PreloadScript[442 bytes]>, contexts: ["C7FF8F2851DDDE4C77456EDCFD6131E3"] }
+2025-04-22T00:55:04.251Z INFO webdriver: BIDI RESULT {"id":1,"result":{"subscription":"3dd6ef4f-e6e0-4d99-b34b-3b7d2dc73bfc"},"type":"success"}
+2025-04-22T00:55:04.252Z INFO webdriver: BIDI RESULT {"id":2,"result":{"subscription":"1de9761b-ccbd-4f1c-b9e2-5b5258296350"},"type":"success"}
+2025-04-22T00:55:04.252Z INFO webdriver: BIDI RESULT {"id":4,"result":{"subscription":"fe604da1-669f-4b22-8a51-19d38bc897e7"},"type":"success"}
+2025-04-22T00:55:04.253Z INFO webdriver: BIDI RESULT {"id":5,"result":{"subscription":"5cc0b44f-ca1d-4efd-a0b7-d838741c0695"},"type":"success"}
+2025-04-22T00:55:04.253Z INFO webdriver: BIDI RESULT {"id":6,"result":{"subscription":"1e26d391-bb2a-4aa6-ac35-a5097d9f6206"},"type":"success"}
+2025-04-22T00:55:04.254Z INFO webdriver: BIDI RESULT {"id":7,"result":{"contexts":[{"children":[],"clientWindow":"","context":"C7FF8F2851DDDE4C77456EDCFD6131E3","originalOpener":null,"parent":null,"url":"about:blank","userContext":"default"}]},"type":"success"}
+2025-04-22T00:55:04.257Z INFO webdriver: BIDI RESULT {"id":3,"result":{"script":"6e3b851c-c89e-4efe-a809-fd1b216cf7d0"},"type":"success"}
+2025-04-22T00:55:04.258Z INFO webdriver: BIDI COMMAND browsingContext.navigate {"context":"C7FF8F2851DDDE4C77456EDCFD6131E3","url":"https://stage-ferp.fi/user/login","wait":"complete"}
+2025-04-22T00:55:04.258Z INFO webdriver: BIDI RESULT {"id":8,"result":{"realm":"-7766742125062093492.-2517948486238916762","result":{"type":"undefined"},"type":"success"},"type":"success"}
+2025-04-22T00:55:04.258Z INFO webdriver: BIDI RESULT {"id":9,"result":{"script":"64d83114-ed27-4bd1-b24a-433c6e861196"},"type":"success"}
+2025-04-22T00:55:05.209Z INFO webdriver: BIDI RESULT {"id":10,"result":{"navigation":"b89bcc5a-f85f-4af0-beca-aaee33c88ad6","url":"https://stage-ferp.fi/user/login"},"type":"success"}
+2025-04-22T00:55:05.210Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"input.ui-input__element[type=\"email\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:05.221Z INFO webdriver: BIDI RESULT {"id":11,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.4","type":"node","value":{"attributes":{"aria-label":"Sähköposti","autocomplete":"off","class":"ui-input__element","id":"ui-id-6634-0","placeholder":" ","tabindex":"0","type":"email"},"childNodeCount":0,"localName":"input","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.5","type":"node","value":{"childNodeCount":2,"mode":"closed","nodeType":11}}}}]},"type":"success"}
+2025-04-22T00:55:05.225Z INFO webdriver: BIDI COMMAND script.callFunction {"functionDeclaration":"<Function[194 bytes] checkVisibility>","awaitPromise":true,"arguments":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.4"},{"type":"object","value":[["withinViewport",{"type":"boolean","value":false}]]}],"target":{"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}}
+2025-04-22T00:55:05.225Z INFO webdriver: COMMAND getElementCSSValue("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.4", "display")
+2025-04-22T00:55:05.226Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.4/css/display
+2025-04-22T00:55:05.235Z INFO webdriver: RESULT flex
+2025-04-22T00:55:05.239Z INFO webdriver: BIDI RESULT {"id":12,"result":{"realm":"-427088854245926011.5650451527273260753","result":{"type":"boolean","value":true},"type":"success"},"type":"success"}
+2025-04-22T00:55:05.240Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"input.ui-input__element[type=\"email\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:05.241Z INFO webdriver: BIDI RESULT {"id":13,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.4","type":"node","value":{"attributes":{"aria-label":"Sähköposti","autocomplete":"off","class":"ui-input__element","id":"ui-id-6634-0","placeholder":" ","tabindex":"0","type":"email"},"childNodeCount":0,"localName":"input","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.5","type":"node","value":{"childNodeCount":2,"mode":"closed","nodeType":11}}}}]},"type":"success"}
+2025-04-22T00:55:05.242Z INFO webdriver: COMMAND elementClear("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.4")
+2025-04-22T00:55:05.242Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.4/clear
+2025-04-22T00:55:05.259Z INFO webdriver: RESULT null
+2025-04-22T00:55:05.259Z INFO webdriver: COMMAND elementSendKeys("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.4", "example+25@feelia.com")
+2025-04-22T00:55:05.259Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.4/value
+2025-04-22T00:55:05.259Z INFO webdriver: DATA { text: 'example+25@feelia.com' }
+2025-04-22T00:55:05.300Z INFO webdriver: RESULT null
+2025-04-22T00:55:05.300Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"input.ui-input__element[type=\"password\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:05.302Z INFO webdriver: BIDI RESULT {"id":14,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.17","type":"node","value":{"attributes":{"aria-label":"Salasana","autocomplete":"off","class":"ui-input__element","id":"ui-id-6634-1","tabindex":"0","type":"password"},"childNodeCount":0,"localName":"input","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.26","type":"node","value":{"childNodeCount":1,"mode":"closed","nodeType":11}}}}]},"type":"success"}
+2025-04-22T00:55:05.303Z INFO webdriver: BIDI COMMAND script.callFunction {"functionDeclaration":"<Function[194 bytes] checkVisibility>","awaitPromise":true,"arguments":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.17"},{"type":"object","value":[["withinViewport",{"type":"boolean","value":false}]]}],"target":{"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}}
+2025-04-22T00:55:05.304Z INFO webdriver: COMMAND getElementCSSValue("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.17", "display")
+2025-04-22T00:55:05.304Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.17/css/display
+2025-04-22T00:55:05.308Z INFO webdriver: RESULT flex
+2025-04-22T00:55:05.310Z INFO webdriver: BIDI RESULT {"id":15,"result":{"realm":"-427088854245926011.5650451527273260753","result":{"type":"boolean","value":true},"type":"success"},"type":"success"}
+2025-04-22T00:55:05.311Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"input.ui-input__element[type=\"password\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:05.312Z INFO webdriver: BIDI RESULT {"id":16,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.17","type":"node","value":{"attributes":{"aria-label":"Salasana","autocomplete":"off","class":"ui-input__element","id":"ui-id-6634-1","tabindex":"0","type":"password"},"childNodeCount":0,"localName":"input","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.26","type":"node","value":{"childNodeCount":1,"mode":"closed","nodeType":11}}}}]},"type":"success"}
+2025-04-22T00:55:05.313Z INFO webdriver: COMMAND elementClear("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.17")
+2025-04-22T00:55:05.313Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.17/clear
+2025-04-22T00:55:05.325Z INFO webdriver: RESULT null
+2025-04-22T00:55:05.325Z INFO webdriver: COMMAND elementSendKeys("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.17", "123456")
+2025-04-22T00:55:05.325Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.17/value
+2025-04-22T00:55:05.325Z INFO webdriver: DATA { text: '123456' }
+2025-04-22T00:55:05.351Z INFO webdriver: RESULT null
+2025-04-22T00:55:05.351Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"button.ui-button.size-56.primary.form-btn[type=\"submit\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:05.353Z INFO webdriver: BIDI RESULT {"id":17,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.12","type":"node","value":{"attributes":{"class":"ui-button size-56 primary form-btn","data-v-379dea2a":"","data-v-d2d4b594":"","type":"submit"},"childNodeCount":5,"localName":"button","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":null}}]},"type":"success"}
+2025-04-22T00:55:05.354Z INFO webdriver: COMMAND elementClick("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.12")
+2025-04-22T00:55:05.354Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.EE33917F0EF107F6EF3D6241C8291C0B.e.12/click
+2025-04-22T00:55:05.382Z INFO webdriver: RESULT null
+2025-04-22T00:55:05.382Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:05.382Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:05.385Z INFO webdriver: RESULT https://stage-ferp.fi/user/login
+2025-04-22T00:55:05.894Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:05.894Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:05.897Z INFO webdriver: RESULT https://stage-ferp.fi/user/login
+2025-04-22T00:55:06.383Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:06.383Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:06.385Z INFO webdriver: RESULT https://stage-ferp.fi/order
+2025-04-22T00:55:06.386Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:06.386Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:06.389Z INFO webdriver: RESULT https://stage-ferp.fi/order
+2025-04-22T00:55:06.391Z INFO webdriver: BIDI COMMAND browsingContext.navigate {"context":"C7FF8F2851DDDE4C77456EDCFD6131E3","url":"https://stage-ferp.fi/user/login","wait":"complete"}
+2025-04-22T00:55:06.447Z INFO webdriver: BIDI RESULT {"id":18,"result":{"navigation":"10f0c7d0-f061-4dac-8e14-91e42a21e524","url":"https://stage-ferp.fi/user/login"},"type":"success"}
+2025-04-22T00:55:06.447Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"input.ui-input__element[type=\"email\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:06.460Z INFO webdriver: BIDI RESULT {"id":19,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.32","type":"node","value":{"attributes":{"aria-label":"Sähköposti","autocomplete":"off","class":"ui-input__element","id":"ui-id-6964-0","placeholder":" ","tabindex":"0","type":"email"},"childNodeCount":0,"localName":"input","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.33","type":"node","value":{"childNodeCount":2,"mode":"closed","nodeType":11}}}}]},"type":"success"}
+2025-04-22T00:55:06.461Z INFO webdriver: BIDI COMMAND script.callFunction {"functionDeclaration":"<Function[194 bytes] checkVisibility>","awaitPromise":true,"arguments":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.32"},{"type":"object","value":[["withinViewport",{"type":"boolean","value":false}]]}],"target":{"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}}
+2025-04-22T00:55:06.461Z INFO webdriver: COMMAND getElementCSSValue("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.32", "display")
+2025-04-22T00:55:06.461Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.32/css/display
+2025-04-22T00:55:06.467Z INFO webdriver: RESULT flex
+2025-04-22T00:55:06.470Z INFO webdriver: BIDI RESULT {"id":20,"result":{"realm":"5291927672621203908.-7047148844761003592","result":{"type":"boolean","value":true},"type":"success"},"type":"success"}
+2025-04-22T00:55:06.470Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"input.ui-input__element[type=\"email\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:06.472Z INFO webdriver: BIDI RESULT {"id":21,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.32","type":"node","value":{"attributes":{"aria-label":"Sähköposti","autocomplete":"off","class":"ui-input__element","id":"ui-id-6964-0","placeholder":" ","tabindex":"0","type":"email"},"childNodeCount":0,"localName":"input","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.33","type":"node","value":{"childNodeCount":2,"mode":"closed","nodeType":11}}}}]},"type":"success"}
+2025-04-22T00:55:06.473Z INFO webdriver: COMMAND elementClear("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.32")
+2025-04-22T00:55:06.473Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.32/clear
+2025-04-22T00:55:06.484Z INFO webdriver: RESULT null
+2025-04-22T00:55:06.484Z INFO webdriver: COMMAND elementSendKeys("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.32", "example+25@feelia.com")
+2025-04-22T00:55:06.484Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.32/value
+2025-04-22T00:55:06.484Z INFO webdriver: DATA { text: 'example+25@feelia.com' }
+2025-04-22T00:55:06.515Z INFO webdriver: RESULT null
+2025-04-22T00:55:06.515Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"input.ui-input__element[type=\"password\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:06.518Z INFO webdriver: BIDI RESULT {"id":22,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.44","type":"node","value":{"attributes":{"aria-label":"Salasana","autocomplete":"off","class":"ui-input__element","id":"ui-id-6964-1","tabindex":"0","type":"password"},"childNodeCount":0,"localName":"input","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.46","type":"node","value":{"childNodeCount":1,"mode":"closed","nodeType":11}}}}]},"type":"success"}
+2025-04-22T00:55:06.519Z INFO webdriver: BIDI COMMAND script.callFunction {"functionDeclaration":"<Function[194 bytes] checkVisibility>","awaitPromise":true,"arguments":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.44"},{"type":"object","value":[["withinViewport",{"type":"boolean","value":false}]]}],"target":{"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}}
+2025-04-22T00:55:06.519Z INFO webdriver: COMMAND getElementCSSValue("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.44", "display")
+2025-04-22T00:55:06.519Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.44/css/display
+2025-04-22T00:55:06.523Z INFO webdriver: RESULT flex
+2025-04-22T00:55:06.527Z INFO webdriver: BIDI RESULT {"id":23,"result":{"realm":"5291927672621203908.-7047148844761003592","result":{"type":"boolean","value":true},"type":"success"},"type":"success"}
+2025-04-22T00:55:06.527Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"input.ui-input__element[type=\"password\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:06.528Z INFO webdriver: BIDI RESULT {"id":24,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.44","type":"node","value":{"attributes":{"aria-label":"Salasana","autocomplete":"off","class":"ui-input__element","id":"ui-id-6964-1","tabindex":"0","type":"password"},"childNodeCount":0,"localName":"input","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.46","type":"node","value":{"childNodeCount":1,"mode":"closed","nodeType":11}}}}]},"type":"success"}
+2025-04-22T00:55:06.529Z INFO webdriver: COMMAND elementClear("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.44")
+2025-04-22T00:55:06.529Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.44/clear
+2025-04-22T00:55:06.558Z INFO webdriver: RESULT null
+2025-04-22T00:55:06.558Z INFO webdriver: COMMAND elementSendKeys("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.44", "123456")
+2025-04-22T00:55:06.558Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.44/value
+2025-04-22T00:55:06.558Z INFO webdriver: DATA { text: '123456' }
+2025-04-22T00:55:06.581Z INFO webdriver: RESULT null
+2025-04-22T00:55:06.581Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"button.ui-button.size-56.primary.form-btn[type=\"submit\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:06.583Z INFO webdriver: BIDI RESULT {"id":25,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.40","type":"node","value":{"attributes":{"class":"ui-button size-56 primary form-btn","data-v-379dea2a":"","data-v-d2d4b594":"","type":"submit"},"childNodeCount":5,"localName":"button","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":null}}]},"type":"success"}
+2025-04-22T00:55:06.583Z INFO webdriver: COMMAND elementClick("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.40")
+2025-04-22T00:55:06.584Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.40/click
+2025-04-22T00:55:06.614Z INFO webdriver: RESULT null
+2025-04-22T00:55:06.614Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:06.614Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:06.616Z INFO webdriver: RESULT https://stage-ferp.fi/user/login
+2025-04-22T00:55:07.120Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:07.120Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:07.123Z INFO webdriver: RESULT https://stage-ferp.fi/order
+2025-04-22T00:55:07.123Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:07.124Z INFO webdriver: BIDI RESULT {"id":26,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:07.125Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:07.126Z INFO webdriver: BIDI RESULT {"id":27,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:07.627Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:07.628Z INFO webdriver: BIDI RESULT {"id":28,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:08.137Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:08.139Z INFO webdriver: BIDI RESULT {"id":29,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:08.638Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:08.640Z INFO webdriver: BIDI RESULT {"id":30,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:09.138Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:09.140Z INFO webdriver: BIDI RESULT {"id":31,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:09.635Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:09.637Z INFO webdriver: BIDI RESULT {"id":32,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:10.133Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:10.136Z INFO webdriver: BIDI RESULT {"id":33,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:10.633Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:10.635Z INFO webdriver: BIDI RESULT {"id":34,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:11.125Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:11.126Z INFO webdriver: BIDI RESULT {"id":35,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:11.625Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:11.626Z INFO webdriver: BIDI RESULT {"id":36,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:12.141Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:12.143Z INFO webdriver: BIDI RESULT {"id":37,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:12.641Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:12.643Z INFO webdriver: BIDI RESULT {"id":38,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:13.125Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:13.127Z INFO webdriver: BIDI RESULT {"id":39,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:13.626Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:13.628Z INFO webdriver: BIDI RESULT {"id":40,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:14.126Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:14.128Z INFO webdriver: BIDI RESULT {"id":41,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:14.243Z ERROR webdriver: Could not connect to Bidi protocol of any candidate url in time: "ws://127.0.0.1:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf"
+2025-04-22T00:55:14.626Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:14.628Z INFO webdriver: BIDI RESULT {"id":42,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.52","type":"node","value":{"attributes":{"class":"ui-button size-48 menu","data-v-379dea2a":"","data-v-f52f61b6":"","disabled":"false","href":"/order-history"},"childNodeCount":6,"localName":"a","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":null}}]},"type":"success"}
+2025-04-22T00:55:14.629Z INFO webdriver: BIDI COMMAND script.callFunction {"functionDeclaration":"<Function[194 bytes] checkVisibility>","awaitPromise":true,"arguments":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.52"},{"type":"object","value":[["withinViewport",{"type":"boolean","value":false}]]}],"target":{"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}}
+2025-04-22T00:55:14.629Z INFO webdriver: COMMAND getElementCSSValue("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.52", "display")
+2025-04-22T00:55:14.629Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.52/css/display
+2025-04-22T00:55:14.634Z INFO webdriver: RESULT flex
+2025-04-22T00:55:14.634Z INFO webdriver: BIDI RESULT {"id":43,"result":{"realm":"5291927672621203908.-7047148844761003592","result":{"type":"boolean","value":true},"type":"success"},"type":"success"}
+2025-04-22T00:55:14.634Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/order-history\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:14.635Z INFO webdriver: BIDI RESULT {"id":44,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.52","type":"node","value":{"attributes":{"class":"ui-button size-48 menu","data-v-379dea2a":"","data-v-f52f61b6":"","disabled":"false","href":"/order-history"},"childNodeCount":6,"localName":"a","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":null}}]},"type":"success"}
+2025-04-22T00:55:14.636Z INFO webdriver: COMMAND elementClick("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.52")
+2025-04-22T00:55:14.636Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.DBFB5F2A16CEC0EAD60A8ACC524A86FC.e.52/click
+2025-04-22T00:55:14.672Z INFO webdriver: RESULT null
+2025-04-22T00:55:14.673Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:14.673Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:14.676Z INFO webdriver: RESULT https://stage-ferp.fi/order
+2025-04-22T00:55:15.177Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:15.177Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:15.179Z INFO webdriver: RESULT https://stage-ferp.fi/order-history
+2025-04-22T00:55:15.180Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:15.180Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:15.181Z INFO webdriver: RESULT https://stage-ferp.fi/order-history
+2025-04-22T00:55:15.183Z INFO webdriver: BIDI COMMAND browsingContext.navigate {"context":"C7FF8F2851DDDE4C77456EDCFD6131E3","url":"https://stage-ferp.fi/user/login","wait":"complete"}
+2025-04-22T00:55:15.239Z INFO webdriver: BIDI RESULT {"id":45,"result":{"navigation":"8906a9b1-48fd-4e27-9696-c2d7aa432aa8","url":"https://stage-ferp.fi/user/login"},"type":"success"}
+2025-04-22T00:55:15.239Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"input.ui-input__element[type=\"email\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:15.249Z INFO webdriver: BIDI RESULT {"id":46,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.61","type":"node","value":{"attributes":{"aria-label":"Sähköposti","autocomplete":"off","class":"ui-input__element","id":"ui-id-158-0","placeholder":" ","tabindex":"0","type":"email"},"childNodeCount":0,"localName":"input","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.62","type":"node","value":{"childNodeCount":2,"mode":"closed","nodeType":11}}}}]},"type":"success"}
+2025-04-22T00:55:15.250Z INFO webdriver: BIDI COMMAND script.callFunction {"functionDeclaration":"<Function[194 bytes] checkVisibility>","awaitPromise":true,"arguments":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.61"},{"type":"object","value":[["withinViewport",{"type":"boolean","value":false}]]}],"target":{"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}}
+2025-04-22T00:55:15.251Z INFO webdriver: COMMAND getElementCSSValue("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.61", "display")
+2025-04-22T00:55:15.251Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.61/css/display
+2025-04-22T00:55:15.257Z INFO webdriver: RESULT flex
+2025-04-22T00:55:15.259Z INFO webdriver: BIDI RESULT {"id":47,"result":{"realm":"6830407750031426114.7321746311488009951","result":{"type":"boolean","value":true},"type":"success"},"type":"success"}
+2025-04-22T00:55:15.260Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"input.ui-input__element[type=\"email\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:15.261Z INFO webdriver: BIDI RESULT {"id":48,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.61","type":"node","value":{"attributes":{"aria-label":"Sähköposti","autocomplete":"off","class":"ui-input__element","id":"ui-id-158-0","placeholder":" ","tabindex":"0","type":"email"},"childNodeCount":0,"localName":"input","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.62","type":"node","value":{"childNodeCount":2,"mode":"closed","nodeType":11}}}}]},"type":"success"}
+2025-04-22T00:55:15.262Z INFO webdriver: COMMAND elementClear("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.61")
+2025-04-22T00:55:15.262Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.61/clear
+2025-04-22T00:55:15.273Z INFO webdriver: RESULT null
+2025-04-22T00:55:15.273Z INFO webdriver: COMMAND elementSendKeys("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.61", "example+25@feelia.com")
+2025-04-22T00:55:15.273Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.61/value
+2025-04-22T00:55:15.273Z INFO webdriver: DATA { text: 'example+25@feelia.com' }
+2025-04-22T00:55:15.300Z INFO webdriver: RESULT null
+2025-04-22T00:55:15.300Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"input.ui-input__element[type=\"password\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:15.303Z INFO webdriver: BIDI RESULT {"id":49,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.73","type":"node","value":{"attributes":{"aria-label":"Salasana","autocomplete":"off","class":"ui-input__element","id":"ui-id-158-1","tabindex":"0","type":"password"},"childNodeCount":0,"localName":"input","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.75","type":"node","value":{"childNodeCount":1,"mode":"closed","nodeType":11}}}}]},"type":"success"}
+2025-04-22T00:55:15.304Z INFO webdriver: BIDI COMMAND script.callFunction {"functionDeclaration":"<Function[194 bytes] checkVisibility>","awaitPromise":true,"arguments":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.73"},{"type":"object","value":[["withinViewport",{"type":"boolean","value":false}]]}],"target":{"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}}
+2025-04-22T00:55:15.304Z INFO webdriver: COMMAND getElementCSSValue("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.73", "display")
+2025-04-22T00:55:15.304Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.73/css/display
+2025-04-22T00:55:15.308Z INFO webdriver: RESULT flex
+2025-04-22T00:55:15.310Z INFO webdriver: BIDI RESULT {"id":50,"result":{"realm":"6830407750031426114.7321746311488009951","result":{"type":"boolean","value":true},"type":"success"},"type":"success"}
+2025-04-22T00:55:15.311Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"input.ui-input__element[type=\"password\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:15.312Z INFO webdriver: BIDI RESULT {"id":51,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.73","type":"node","value":{"attributes":{"aria-label":"Salasana","autocomplete":"off","class":"ui-input__element","id":"ui-id-158-1","tabindex":"0","type":"password"},"childNodeCount":0,"localName":"input","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.75","type":"node","value":{"childNodeCount":1,"mode":"closed","nodeType":11}}}}]},"type":"success"}
+2025-04-22T00:55:15.314Z INFO webdriver: COMMAND elementClear("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.73")
+2025-04-22T00:55:15.314Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.73/clear
+2025-04-22T00:55:15.324Z INFO webdriver: RESULT null
+2025-04-22T00:55:15.324Z INFO webdriver: COMMAND elementSendKeys("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.73", "123456")
+2025-04-22T00:55:15.324Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.73/value
+2025-04-22T00:55:15.324Z INFO webdriver: DATA { text: '123456' }
+2025-04-22T00:55:15.349Z INFO webdriver: RESULT null
+2025-04-22T00:55:15.349Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"button.ui-button.size-56.primary.form-btn[type=\"submit\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:15.351Z INFO webdriver: BIDI RESULT {"id":52,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.69","type":"node","value":{"attributes":{"class":"ui-button size-56 primary form-btn","data-v-379dea2a":"","data-v-d2d4b594":"","type":"submit"},"childNodeCount":5,"localName":"button","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":null}}]},"type":"success"}
+2025-04-22T00:55:15.352Z INFO webdriver: COMMAND elementClick("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.69")
+2025-04-22T00:55:15.352Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.69/click
+2025-04-22T00:55:15.374Z INFO webdriver: RESULT null
+2025-04-22T00:55:15.374Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:15.375Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:15.377Z INFO webdriver: RESULT https://stage-ferp.fi/user/login
+2025-04-22T00:55:15.875Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:15.875Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:15.880Z INFO webdriver: RESULT https://stage-ferp.fi/order
+2025-04-22T00:55:15.880Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:15.882Z INFO webdriver: BIDI RESULT {"id":53,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:15.882Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:15.883Z INFO webdriver: BIDI RESULT {"id":54,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:16.395Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:16.397Z INFO webdriver: BIDI RESULT {"id":55,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:16.890Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:16.892Z INFO webdriver: BIDI RESULT {"id":56,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:17.395Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:17.398Z INFO webdriver: BIDI RESULT {"id":57,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:17.896Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:17.897Z INFO webdriver: BIDI RESULT {"id":58,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:18.395Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:18.398Z INFO webdriver: BIDI RESULT {"id":59,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:18.889Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:18.892Z INFO webdriver: BIDI RESULT {"id":60,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:19.393Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:19.395Z INFO webdriver: BIDI RESULT {"id":61,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:19.883Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:19.885Z INFO webdriver: BIDI RESULT {"id":62,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:20.383Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:20.384Z INFO webdriver: BIDI RESULT {"id":63,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:20.890Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:20.892Z INFO webdriver: BIDI RESULT {"id":64,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:21.383Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:21.385Z INFO webdriver: BIDI RESULT {"id":65,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:21.884Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:21.886Z INFO webdriver: BIDI RESULT {"id":66,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:22.384Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:22.386Z INFO webdriver: BIDI RESULT {"id":67,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:22.887Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:22.889Z INFO webdriver: BIDI RESULT {"id":68,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:23.384Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:23.386Z INFO webdriver: BIDI RESULT {"id":69,"result":{"nodes":[]},"type":"success"}
+2025-04-22T00:55:23.895Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:23.898Z INFO webdriver: BIDI RESULT {"id":70,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.79","type":"node","value":{"attributes":{"class":"ui-button size-48 menu","data-v-379dea2a":"","data-v-f52f61b6":"","disabled":"false","href":"/allergic"},"childNodeCount":6,"localName":"a","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":null}}]},"type":"success"}
+2025-04-22T00:55:23.899Z INFO webdriver: BIDI COMMAND script.callFunction {"functionDeclaration":"<Function[194 bytes] checkVisibility>","awaitPromise":true,"arguments":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.79"},{"type":"object","value":[["withinViewport",{"type":"boolean","value":false}]]}],"target":{"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}}
+2025-04-22T00:55:23.899Z INFO webdriver: COMMAND getElementCSSValue("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.79", "display")
+2025-04-22T00:55:23.899Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.79/css/display
+2025-04-22T00:55:23.904Z INFO webdriver: RESULT flex
+2025-04-22T00:55:23.905Z INFO webdriver: BIDI RESULT {"id":71,"result":{"realm":"6830407750031426114.7321746311488009951","result":{"type":"boolean","value":true},"type":"success"},"type":"success"}
+2025-04-22T00:55:23.905Z INFO webdriver: BIDI COMMAND browsingContext.locateNodes {"locator":{"type":"css","value":"a[href=\"/allergic\"]"},"context":"C7FF8F2851DDDE4C77456EDCFD6131E3"}
+2025-04-22T00:55:23.906Z INFO webdriver: BIDI RESULT {"id":72,"result":{"nodes":[{"sharedId":"f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.79","type":"node","value":{"attributes":{"class":"ui-button size-48 menu","data-v-379dea2a":"","data-v-f52f61b6":"","disabled":"false","href":"/allergic"},"childNodeCount":6,"localName":"a","namespaceURI":"http://www.w3.org/1999/xhtml","nodeType":1,"shadowRoot":null}}]},"type":"success"}
+2025-04-22T00:55:23.907Z INFO webdriver: COMMAND elementClick("f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.79")
+2025-04-22T00:55:23.907Z INFO webdriver: [POST] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/element/f.C7FF8F2851DDDE4C77456EDCFD6131E3.d.4A1B706A251F7BEA164043529BFCCD8D.e.79/click
+2025-04-22T00:55:23.928Z INFO webdriver: RESULT null
+2025-04-22T00:55:23.928Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:23.929Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:23.931Z INFO webdriver: RESULT https://stage-ferp.fi/order
+2025-04-22T00:55:24.436Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:24.436Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:24.477Z INFO webdriver: RESULT https://stage-ferp.fi/allergic
+2025-04-22T00:55:24.477Z INFO webdriver: COMMAND getUrl()
+2025-04-22T00:55:24.477Z INFO webdriver: [GET] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf/url
+2025-04-22T00:55:24.479Z INFO webdriver: RESULT https://stage-ferp.fi/allergic
+2025-04-22T00:55:24.481Z INFO webdriver: COMMAND deleteSession()
+2025-04-22T00:55:24.481Z INFO webdriver: [DELETE] http://localhost:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf
+2025-04-22T00:55:24.522Z INFO webdriver: RESULT null
+2025-04-22T00:55:24.522Z INFO webdriver: Close Bidi connection to ws://127.0.0.1:64614/session/8e01d1e7035cbfb62dc9dc8d98cd1cbf
+2025-04-22T00:55:24.523Z INFO webdriver: Kill driver process with PID 18264

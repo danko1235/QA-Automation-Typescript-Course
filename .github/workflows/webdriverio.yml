@@ -1,0 +1,57 @@
+name: WebdriverIO Tests
+
+on:
+  push:
+    branches: [ "master", "lesson22" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    env:
+      BUILD_FOLDER: ./lesson17-webdriver-io
+      HEADLESS: true
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22.x]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: ${{ env.BUILD_FOLDER }}/package-lock.json
+      - name: Install dependencies
+        working-directory: ${{ env.BUILD_FOLDER }}
+        run: npm ci
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@latest
+        with:
+          chrome-version: stable
+      - name: Run WebdriverIO tests
+        working-directory: ${{ env.BUILD_FOLDER }}
+        run: npm run wdio
+      - name: Generate Allure Report
+        if: always()
+        working-directory: ${{ env.BUILD_FOLDER }}
+        run: npx allure generate wdio-results/allure-results --clean -o allure-report
+      - name: Upload WebdriverIO Allure report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wdio-allure-report
+          path: ${{ env.BUILD_FOLDER }}/allure-report/
+          retention-days: 30
+      - name: Upload WebdriverIO raw results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wdio-results
+          path: ${{ env.BUILD_FOLDER }}/wdio-results/
+          retention-days: 30

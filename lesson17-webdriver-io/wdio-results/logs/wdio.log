@@ -1,0 +1,9 @@
+2025-04-22T00:55:01.466Z INFO @wdio/cli:launcher: Run onPrepare hook
+2025-04-22T00:55:01.466Z INFO @wdio/utils: Setting up browser driver for: chrome@stable
+2025-04-22T00:55:01.467Z INFO @wdio/utils: Setting up browser binaries for: chrome@stable
+2025-04-22T00:55:01.468Z INFO webdriver: Using Chromedriver v135.0.7049.96 from cache directory C:\Users\dudar\AppData\Local\Temp
+2025-04-22T00:55:01.469Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2025-04-22T00:55:01.469Z INFO @wdio/local-runner: Start worker 0-0 with arg: run ./wdio.conf.ts
+2025-04-22T00:55:24.668Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2025-04-22T00:55:24.669Z INFO @wdio/local-runner: Shutting down spawned worker
+2025-04-22T00:55:24.926Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully

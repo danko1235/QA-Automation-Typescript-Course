@@ -1,0 +1,757 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Dribbble tests >> should navigate to shot detail page when clicking on a shot
+- Location: C:\Users\dudar\OneDrive\Desktop\AQA_Courses\lesson18-playwright\tests\drrible.spec.ts:20:9
+
+# Error details
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('.shot-thumbnail').first()
+    - locator resolved to <li data-ad-data="" data-boost-id="" data-request-source="" id="screenshot-25923250" data-is-boost-fallback="" data-track-location="Shot" data-thumbnail-id="25923250" data-search-uuid="97a199a1-f738-4703-af9d-1bb071ccf73c" class="shot-thumbnail js-thumbnail shot-thumbnail-container    ">…</li>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+    at SearchResultsPage.clickOnFirstShot (C:\Users\dudar\OneDrive\Desktop\AQA_Courses\lesson18-playwright\pages\search-results-page.ts:27:38)
+    at C:\Users\dudar\OneDrive\Desktop\AQA_Courses\lesson18-playwright\tests\drrible.spec.ts:21:33
+```
+
+# Page snapshot
+
+```yaml
+- heading "We value your privacy" [level=1]
+- paragraph: We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking "Accept All", you consent to our use of cookies.
+- button "Customise"
+- button "Reject All"
+- button "Accept All"
+- link "Back to home page":
+  - 'img "Dribbble: the community for graphic design"'
+- combobox "Submit":
+  - search:
+    - searchbox "Submit"
+- button "Shots"
+- button "Search":
+  - img
+- navigation:
+  - list:
+    - listitem:
+      - link "Explore"
+    - listitem:
+      - link "Hire a Designer"
+    - listitem:
+      - link "Find Jobs"
+    - listitem:
+      - link "Blog"
+- link "Sign up"
+- link "Log in"
+- heading "Discover the world’s top designers" [level=1]
+- heading "Explore work from the most talented and accomplished designers ready to take on your next project" [level=2]
+- combobox "Submit":
+  - search:
+    - searchbox "Submit"
+- button "Shots"
+- button "Search":
+  - img
+- text: Trending searches
+- link "landing page"
+- link "e-commerce"
+- link "mobile app"
+- link "logo design"
+- link "dashboard"
+- link "icons"
+- link "Popular":
+  - img
+  - text: Popular
+- link:
+  - img
+- list:
+  - listitem:
+    - link "Discover"
+  - listitem:
+    - link "Animation"
+  - listitem:
+    - link "Branding"
+  - listitem:
+    - link "Illustration"
+  - listitem:
+    - link "Mobile"
+  - listitem:
+    - link "Print"
+  - listitem:
+    - link "Product Design"
+  - listitem:
+    - link "Typography"
+  - listitem:
+    - link "Web Design"
+- link "Filters":
+  - img
+  - text: Filters
+- main:
+  - list:
+    - listitem:
+      - figure:
+        - img "Logo Design agency logo b logo b logo design brand identity branding business logo fintech logo letter b logo logo logo and brand identity logo b logo design logo designer logotype marketing logo modern logo startup logo"
+      - link "View Logo Design"
+      - text: Logo Design
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "JOYANTA RAY | Brand Identity Expert JOYANTA RAY | Brand Identity Expert":
+        - img "JOYANTA RAY | Brand Identity Expert"
+        - text: JOYANTA RAY | Brand Identity Expert
+      - link "Pro"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "169"
+      - img
+      - text: 4.5k
+    - listitem:
+      - figure:
+        - img "Marvel Logo Design abstract logo brand brand identity branding business logo creative logo custom logo identity logo logo and brand identity logo design logo designer logo mark logodesign logos logotype m logo design minimalist logo modern logo symbol"
+      - link "View Marvel Logo Design"
+      - text: Marvel Logo Design
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Graphtheory Graphtheory":
+        - img "Graphtheory"
+        - text: Graphtheory
+      - link "Pro"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "131"
+      - img
+      - text: 5.1k
+    - listitem:
+      - figure:
+        - img "Social Security Website – Redesign Concept | Responsive | UIUX animation interface product service startup ui ux web"
+      - img
+      - link "View Social Security Website – Redesign Concept | Responsive | UIUX"
+      - text: Social Security Website – Redesign Concept | Responsive | UIUX
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "ilias miah ✪ ilias miah ✪":
+        - img "ilias miah ✪"
+        - text: ilias miah ✪
+      - link "Like":
+        - img
+        - text: Like
+      - text: "151"
+      - img
+      - text: 5.2k
+    - listitem:
+      - figure:
+        - img "Abstract Bird Logo animal logo app logo bird bird illustration brand identity eagle logo flying bird gradient logo ios icon logo mark logodesign logotype minimalist logo modern logo software logo startup logo tech company technology logo"
+      - link "View Abstract Bird Logo"
+      - text: Abstract Bird Logo
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Fahim Khan | Brand Designer Fahim Khan | Brand Designer":
+        - img "Fahim Khan | Brand Designer"
+        - text: Fahim Khan | Brand Designer
+      - link "Pro"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "59"
+      - img
+      - text: "782"
+    - listitem:
+      - figure
+      - img
+      - text: bb.agency
+      - link "View BB Agency - Services"
+      - text: See how BB Agency’s full-cycle process can help your company uncover value.
+      - link "Balkan Brothers Balkan Brothers":
+        - img "Balkan Brothers"
+        - text: Balkan Brothers
+      - link "Hide ads"
+      - text: ●
+      - link "Advertise"
+    - listitem:
+      - figure:
+        - img "Logo Design brand branding design icon identity logo logo design logo designer logo mark logodesign logos logotype mark modern logo symbol vector"
+      - img
+      - link "View Logo Design"
+      - text: Logo Design
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Khabib 🦅 Khabib 🦅":
+        - img "Khabib 🦅"
+        - text: Khabib 🦅
+      - link "Pro"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "101"
+      - img
+      - text: 2.3k
+    - listitem:
+      - figure:
+        - img "Decentra Logo Design brand branding design icon identity logo logo design logo mark logodesign logos logotype modern logo symbol vector"
+      - img
+      - link "View Decentra Logo Design"
+      - text: Decentra Logo Design
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Knacky Studio Knacky Studio":
+        - img "Knacky Studio"
+        - text: Knacky Studio
+      - link "Team"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "82"
+      - img
+      - text: 1.1k
+    - listitem:
+      - figure:
+        - img "Crypto Wallet & Exchange Mobile UI app app design bitcoin crypto crypto app crypto exchange crypto wallet cryptocurrency design ethereum fintech interface ios mobile app mobile app design product design tether ui ux"
+      - link "View Crypto Wallet & Exchange Mobile UI"
+      - text: Crypto Wallet & Exchange Mobile UI
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Nixtio Nixtio":
+        - img "Nixtio"
+        - text: Nixtio
+      - link "Team"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "20"
+      - img
+      - text: "315"
+    - listitem:
+      - figure:
+        - img "AI Video Editor Interface ai ai tool ai video generator ai website design creator editor interface product design tool video video creation software video generator web design web interface website design"
+      - link "View AI Video Editor Interface"
+      - text: AI Video Editor Interface
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Nixtio Nixtio":
+        - img "Nixtio"
+        - text: Nixtio
+      - link "Team"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "179"
+      - img
+      - text: 10.3k
+    - listitem:
+      - figure:
+        - img "Logo Design - D - DX brand brand and identity brand designer branding corporate identity design icon identity logo logo design logo designer logo mark logodesign logos logotype mark modern logo symbol vector visual identity"
+      - img
+      - link "View Logo Design - D - DX"
+      - text: Logo Design - D - DX
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Riya Moni Riya Moni":
+        - img "Riya Moni"
+        - text: Riya Moni
+      - link "Pro"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "117"
+      - img
+      - text: 2.6k
+    - listitem:
+      - figure:
+        - img "Gifting Platform App Ui/Ux Design ai app b2b charts dashboard gifting management app platform product design ui ux web app website"
+      - link "View Gifting Platform App Ui/Ux Design"
+      - text: Gifting Platform App Ui/Ux Design
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Musemind UI/UX Agency Musemind UI/UX Agency":
+        - img "Musemind UI/UX Agency"
+        - text: Musemind UI/UX Agency
+      - link "Team"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "37"
+      - img
+      - text: 1k
+    - listitem:
+      - figure
+      - img
+      - text: heytaco.com
+      - link "View Feb"
+      - text: Boost Engagement and Build a Culture of Appreciation
+      - link "HeyTaco HeyTaco":
+        - img "HeyTaco"
+        - text: HeyTaco
+      - link "Hide ads"
+      - text: ●
+      - link "Advertise"
+    - listitem:
+      - figure:
+        - img "Travel Mobile iOS App android app app ui branding bright bus tracking dashboard design green interface ios mobile mobile design public transportation purrweb agency travel ui ux"
+      - link "Shot Link"
+      - link "View Travel Mobile iOS App"
+      - text: Travel Mobile iOS App
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Purrweb UI/UX Agency Purrweb UI/UX Agency":
+        - img "Purrweb UI/UX Agency"
+        - text: Purrweb UI/UX Agency
+      - link "Team"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "86"
+      - img
+      - text: 2.2k
+    - listitem:
+      - figure:
+        - img "Home decor logo design brand brand identity branding construction decor logo design home logo house logo logo design logo mark logos modern symbol"
+      - link "View Home decor logo design"
+      - text: Home decor logo design
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Md Rezaul - Logo Designer Md Rezaul - Logo Designer":
+        - img "Md Rezaul - Logo Designer"
+        - text: Md Rezaul - Logo Designer
+      - link "Pro"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "132"
+      - img
+      - text: 2.4k
+    - listitem:
+      - figure:
+        - img "Ai education app design ai app ai education app animation app app design app designer app developer college app edu app education app education app design modern app online education app student app ui designer university app"
+      - link "Shot Link"
+      - link "View Ai education app design"
+      - text: Ai education app design
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "LazyInterface UI UX Team LazyInterface UI UX Team":
+        - img "LazyInterface UI UX Team"
+        - text: LazyInterface UI UX Team
+      - link "Team"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "88"
+      - img
+      - text: 9.9k
+    - listitem:
+      - figure:
+        - img "home logo with spark app icon branding creative home home logo house icon design logo logo design magical logo real estate logo rent rent app spark spark logo star wizard wizard logo"
+      - img
+      - link "View home logo with spark"
+      - text: home logo with spark
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Masum Billah ✪ Masum Billah ✪":
+        - img "Masum Billah ✪"
+        - text: Masum Billah ✪
+      - link "Pro"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "57"
+      - img
+      - text: 2.2k
+    - listitem:
+      - figure:
+        - img "Cronos – Web3 Fintech Logo with Circular Arrows Concept agency logo arrows logo blockchain logo branding clean brand identity crypto branding crypto mark decentralized finance fintech identity future tech branding logo logo design logo designer modern logo design saas branding startup identity team logo tech startup web3 logo"
+      - link "View Cronos – Web3 Fintech Logo with Circular Arrows Concept"
+      - text: Cronos – Web3 Fintech Logo with Circular Arrows Concept
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Designer Nazmin Hossan Designer Nazmin Hossan":
+        - img "Designer Nazmin Hossan"
+        - text: Designer Nazmin Hossan
+      - link "Like":
+        - img
+        - text: Like
+      - text: "85"
+      - img
+      - text: 1.5k
+    - listitem:
+      - figure:
+        - img "Pheros 3d architecture box box design brand identity branding candle decor diffuser home label logo minimal packaging parfume ui"
+      - link "View Pheros"
+      - text: Pheros
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Marka Works Branding Agency Marka Works Branding Agency":
+        - img "Marka Works Branding Agency"
+        - text: Marka Works Branding Agency
+      - link "Team"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "94"
+      - img
+      - text: 6.1k
+    - listitem:
+      - figure:
+        - img "medicine logo/ capsule logo design doctor healthcare lab letter logo letter s letter s logo logo logo design logo mark medicine minimalist modern pil pil logo s s logo"
+      - link "View medicine logo/ capsule logo"
+      - text: medicine logo/ capsule logo
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Anamul Hossen | Logo & Branding Designer Anamul Hossen | Logo & Branding Designer":
+        - img "Anamul Hossen | Logo & Branding Designer"
+        - text: Anamul Hossen | Logo & Branding Designer
+      - link "Pro"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "98"
+      - img
+      - text: 1.5k
+    - listitem:
+      - figure:
+        - img "Gantheon - Brand Identity abstract logo airplane logo app logo brand identity branding colorful logo design g logo location logo logo logo design logo designer modern logo tour logo tourism logo travel agency travel agency logo travel logo"
+      - link "View Gantheon - Brand Identity"
+      - text: Gantheon - Brand Identity
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Fangs Studio Fangs Studio":
+        - img "Fangs Studio"
+        - text: Fangs Studio
+      - link "Team"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "91"
+      - img
+      - text: 2k
+    - listitem:
+      - figure:
+        - img "NestTech – Modern Tech Logo Design abstract logo brand identity branding business logo graphic design logo logo branding logo design logotype modern monogram logo n letter n logo nest tech logo nesttech symbol mark tech techlogo technology visual identity"
+      - link "View NestTech – Modern Tech Logo Design"
+      - text: NestTech – Modern Tech Logo Design
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Rafiz Studio Rafiz Studio":
+        - img "Rafiz Studio"
+        - text: Rafiz Studio
+      - link "Like":
+        - img
+        - text: Like
+      - text: "103"
+      - img
+      - text: "875"
+    - listitem:
+      - figure:
+        - img "Letter A, Active, Sports, Fitness, Gym Logo active logo branding creative exercise logo fitness logo gym logo identity letter a logo letter mark logo logo design logo designer logo icon marca modern logo racing logo runnig logo sports logo symbol workout logo"
+      - link "View Letter A, Active, Sports, Fitness, Gym Logo"
+      - text: Letter A, Active, Sports, Fitness, Gym Logo
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Al Mamun | Logo & Branding Expert Al Mamun | Logo & Branding Expert":
+        - img "Al Mamun | Logo & Branding Expert"
+        - text: Al Mamun | Logo & Branding Expert
+      - link "Pro"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "74"
+      - img
+      - text: 1.2k
+    - listitem:
+      - figure:
+        - img "Bet - betting logo design bet betting brand brand identity branding casino design dice gambling identity logo logo design logodesign mark online sports visual identity"
+      - link "View Bet - betting logo design"
+      - text: Bet - betting logo design
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Touhid | Logo Branding Touhid | Logo Branding":
+        - img "Touhid | Logo Branding"
+        - text: Touhid | Logo Branding
+      - link "Pro"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "88"
+      - img
+      - text: 1.3k
+    - listitem:
+      - figure:
+        - img "Tong - Coffee shop brand identity brand identity branding cafe coffee coffee branding coffee logo coffee shop identity design logo tea visual branding visual identity"
+      - img
+      - link "View Tong - Coffee shop brand identity"
+      - text: Tong - Coffee shop brand identity
+      - list:
+        - listitem:
+          - link "Save shot":
+            - img
+        - link "Like":
+          - img
+          - text: Like
+      - link "Wolfpixel Agency Wolfpixel Agency":
+        - img "Wolfpixel Agency"
+        - text: Wolfpixel Agency
+      - link "Team"
+      - link "Like":
+        - img
+        - text: Like
+      - text: "71"
+      - img
+      - text: 1.2k
+  - link "Sign up to continue"
+  - link
+- contentinfo:
+  - link "Illustration Illustration":
+    - img "Illustration"
+    - text: Illustration
+  - link "Print Print":
+    - img "Print"
+    - text: Print
+  - link "Branding Branding":
+    - img "Branding"
+    - text: Branding
+  - link "Typography Typography":
+    - img "Typography"
+    - text: Typography
+  - link "Product Design Product Design":
+    - img "Product Design"
+    - text: Product Design
+  - link "Animation Animation":
+    - img "Animation"
+    - text: Animation
+  - link "Mobile Mobile":
+    - img "Mobile"
+    - text: Mobile
+  - link "Web Design Web Design":
+    - img "Web Design"
+    - text: Web Design
+  - link "Illustration Illustration":
+    - img "Illustration"
+    - text: Illustration
+  - link "Print Print":
+    - img "Print"
+    - text: Print
+  - link "Branding Branding":
+    - img "Branding"
+    - text: Branding
+  - link "Typography Typography":
+    - img "Typography"
+    - text: Typography
+  - link "Product Design Product Design":
+    - img "Product Design"
+    - text: Product Design
+  - link "Animation Animation":
+    - img "Animation"
+    - text: Animation
+  - link "Mobile Mobile":
+    - img "Mobile"
+    - text: Mobile
+  - link "Web Design Web Design":
+    - img "Web Design"
+    - text: Web Design
+  - 'link "Dribbble: the community for graphic design Back to home page"':
+    - 'img "Dribbble: the community for graphic design"'
+    - text: Back to home page
+  - list:
+    - listitem:
+      - link "For designers"
+    - listitem:
+      - link "Hire talent"
+    - listitem:
+      - link "Inspiration"
+    - listitem:
+      - link "Advertising"
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "About"
+    - listitem:
+      - link "Careers"
+    - listitem:
+      - link "Support"
+  - link "Twitter icon Twitter":
+    - img "Twitter icon"
+    - text: Twitter
+  - link "Facebook icon Facebook":
+    - img "Facebook icon"
+    - text: Facebook
+  - link "Instagram":
+    - img
+    - text: Instagram
+  - link "Pinterest icon Pinterest":
+    - img "Pinterest icon"
+    - text: Pinterest
+  - list:
+    - listitem: © 2025 Dribbble
+    - listitem:
+      - link "Terms"
+    - listitem:
+      - link "Privacy"
+    - listitem:
+      - link "Cookies"
+  - list:
+    - listitem:
+      - link "Jobs"
+    - listitem:
+      - link "Designers"
+    - listitem:
+      - link "Freelancers"
+    - listitem:
+      - link "Tags"
+    - listitem:
+      - link "Places"
+    - listitem:
+      - link "Resources"
+- link "close":
+  - img
+```
+
+# Test source
+
+```ts
+   1 | import { Page, Locator } from '@playwright/test';
+   2 |
+   3 | export class SearchResultsPage {
+   4 |     private page: Page;
+   5 |
+   6 |     public constructor(page: Page) {
+   7 |         this.page = page;
+   8 |     }
+   9 |
+  10 |     public get shotCards(): Locator {
+  11 |         return this.page.locator('.shot-thumbnail');
+  12 |     }
+  13 |
+  14 |     public get shotHeader(): Locator {
+  15 |         return this.page.locator('.shot-header');
+  16 |     }
+  17 |
+  18 |     public get searchInput(): Locator {
+  19 |         return this.page.locator('.site-nav-search__input');
+  20 |     }
+  21 |
+  22 |     public async getShotsCount(): Promise<number> {
+  23 |         return await this.shotCards.count();
+  24 |     }
+  25 |
+  26 |     public async clickOnFirstShot(): Promise<void> {
+> 27 |         await this.shotCards.first().click();
+     |                                      ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  28 |     }
+  29 | }
+  30 |
+```
