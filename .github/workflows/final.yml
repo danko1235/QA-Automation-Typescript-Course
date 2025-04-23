@@ -1,4 +1,4 @@
-name: Final Project
+name: Final ProjectI
 
 on:
   push:
@@ -20,6 +20,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Install xvfb
+      run: sudo apt-get install -y xvfb
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
@@ -31,10 +33,11 @@ jobs:
       run: npm ci
     - name: Install Playwright browsers
       working-directory: ${{ env.BUILD_FOLDER }}
-      run: npx playwright install --with-deps chromium
+      run: npx playwright install --with-deps
     - name: Run Playwright tests
       working-directory: ${{ env.BUILD_FOLDER }}
-      run: npx playwright test
+      run: |
+        PLAYWRIGHT_HEADLESS=true xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" npx playwright test
     - name: Upload Playwright report
       if: always()
       uses: actions/upload-artifact@v4
@@ -43,6 +46,7 @@ jobs:
         path: ${{ env.BUILD_FOLDER }}/playwright-report/
         retention-days: 30
     
+    # Allure Report steps
     - name: Setup Allure
       uses: simple-elf/allure-report-action@master
       with:
